@@ -1,0 +1,70 @@
+﻿<Application x:Class="AlchemyGame.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             StartupUri="MainWindow.xaml">
+
+    <Application.Resources>
+
+        <!-- ============================================================= -->
+        <!--  ANCIENT ALCHEMY THEME – GLOBAL RESOURCES                    -->
+        <!-- ============================================================= -->
+
+        <!-- Engraved / chiseled text effect (used on the Clear button) -->
+        <DropShadowEffect x:Key="EngravedEffect"
+                          Color="Black"
+                          Direction="320"
+                          ShadowDepth="3"
+                          BlurRadius="4"
+                          Opacity="0.8"/>
+
+        <!-- Ancient wooden / brass ScrollBar style -->
+        <Style x:Key="AncientScrollBarStyle" TargetType="ScrollBar">
+            <Setter Property="Background" Value="#FF3C2A1A"/>
+            <Setter Property="Foreground" Value="#FF8B6914"/>
+            <Setter Property="Width" Value="16"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ScrollBar">
+                        <Grid>
+                            <Track x:Name="PART_Track" IsDirectionReversed="True">
+                                <Track.Thumb>
+                                    <Thumb Background="#FF8B6914"
+                                           BorderBrush="#FFD4AF37"
+                                           BorderThickness="2">
+                                        <Thumb.Template>
+                                            <ControlTemplate>
+                                                <Border Background="#FF8B6914"
+                                                        CornerRadius="6"
+                                                        BorderBrush="#FFD4AF37"
+                                                        BorderThickness="2"/>
+                                            </ControlTemplate>
+                                        </Thumb.Template>
+                                    </Thumb>
+                                </Track.Thumb>
+                            </Track>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- Optional: make EVERY ScrollBar in the app use the ancient style automatically -->
+        <!-- Uncomment the line below if you want it everywhere (including future windows) -->
+        <!--
+        <Style TargetType="ScrollBar" BasedOn="{StaticResource AncientScrollBarStyle}"/>
+        -->
+
+        <!-- You can also add a global style for ListBoxItem to remove selection highlight completely -->
+        <Style TargetType="ListBoxItem">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ListBoxItem">
+                        <ContentPresenter/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Focusable" Value="False"/>
+        </Style>
+
+    </Application.Resources>
+</Application>

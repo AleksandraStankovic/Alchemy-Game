@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\air.jpg" />
+    <None Remove="Images\background.avif" />
+    <None Remove="Images\earth.png" />
+    <None Remove="Images\energy.png" />
+    <None Remove="Images\fire.jpg" />
+    <None Remove="Images\mud.jpg" />
+    <None Remove="Images\water.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\air.jpg" />
+    <Resource Include="Images\background.avif" />
+    <Resource Include="Images\earth.png" />
+    <Resource Include="Images\energy.png" />
+    <Resource Include="Images\fire.jpg" />
+    <Resource Include="Images\mud.jpg" />
+    <Resource Include="Images\water.png" />
+  </ItemGroup>
+
+</Project>
