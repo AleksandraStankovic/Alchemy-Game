@@ -9,21 +9,24 @@
 
   <ItemGroup>
     <None Remove="Images\air.jpg" />
+    <None Remove="Images\air.png" />
     <None Remove="Images\background.avif" />
     <None Remove="Images\earth.png" />
     <None Remove="Images\energy.png" />
-    <None Remove="Images\fire.jpg" />
-    <None Remove="Images\mud.jpg" />
+    <None Remove="Images\fire.png" />
+    <None Remove="Images\life.png" />
+    <None Remove="Images\mud.png" />
     <None Remove="Images\water.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Images\air.jpg" />
+    <Resource Include="Images\air.png" />
     <Resource Include="Images\background.avif" />
     <Resource Include="Images\earth.png" />
     <Resource Include="Images\energy.png" />
-    <Resource Include="Images\fire.jpg" />
-    <Resource Include="Images\mud.jpg" />
+    <Resource Include="Images\fire.png" />
+    <Resource Include="Images\life.png" />
+    <Resource Include="Images\mud.png" />
     <Resource Include="Images\water.png" />
   </ItemGroup>
 
