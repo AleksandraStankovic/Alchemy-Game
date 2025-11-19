@@ -1,0 +1,76 @@
+
+# Build output
+bin/
+obj/
+Debug/
+Release/
+
+# Visual Studio files
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Rider / JetBrains
+.idea/
+
+# NuGet packages
+*.nupkg
+*.snupkg
+# Uncomment if you have a local packages folder
+# packages/
+
+# If using .NET Core or .NET 5+
+/*.deps.json
+/*.runtimeconfig.json
+
+# Auto-generated files
+Generated_Code/
+*.g.cs
+*.g.i.cs
+*.designer.cs
+
+# Backup & temporary files
+*.tmp
+*.bak
+*.old
+*.orig
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Publish / deployment output
+publish/
+dist/
+release/
+Debug/
+Release/
+
+# User-specific files
+*.userprefs
+*.vspscc
+*.vssscc
+*.dbmdl
+*.jfm
+
+# Resharper
+_ReSharper*/
+*.[Rr]e[Ss]harper
+
+# Test results
+TestResult*/
+*.trx
+*.coverage
+*.coveragexml
+
+# Local app settings (don’t share secrets!)
+appsettings.Development.json
+secrets.json
+
+# Entity Framework migration temp files
+Migrations/
