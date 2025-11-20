@@ -5,11 +5,7 @@
 
     <Application.Resources>
 
-        <!-- ============================================================= -->
-        <!--  ANCIENT ALCHEMY THEME – GLOBAL RESOURCES                    -->
-        <!-- ============================================================= -->
-
-        <!-- Engraved / chiseled text effect (used on the Clear button) -->
+   
         <DropShadowEffect x:Key="EngravedEffect"
                           Color="Black"
                           Direction="320"

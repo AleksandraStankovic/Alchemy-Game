@@ -14,6 +14,7 @@
     <None Remove="Images\earth.png" />
     <None Remove="Images\energy.png" />
     <None Remove="Images\fire.png" />
+    <None Remove="Images\forest.png" />
     <None Remove="Images\life.png" />
     <None Remove="Images\mud.png" />
     <None Remove="Images\water.png" />
@@ -25,6 +26,7 @@
     <Resource Include="Images\earth.png" />
     <Resource Include="Images\energy.png" />
     <Resource Include="Images\fire.png" />
+    <Resource Include="Images\forest.png" />
     <Resource Include="Images\life.png" />
     <Resource Include="Images\mud.png" />
     <Resource Include="Images\water.png" />

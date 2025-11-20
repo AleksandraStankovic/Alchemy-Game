@@ -23,19 +23,7 @@ namespace AlchemyGame.ViewModel
         {
             InitializeComponent();
             ElementNameText.Text = name;
-            //ElementIcon.Source = new BitmapImage(new Uri(iconPath, UriKind.Relative));
-            if (!string.IsNullOrEmpty(iconPath))
-            {
-                try
-                {
-                    ElementIcon.Source = new BitmapImage(new Uri(iconPath, UriKind.Relative));
-                }
-                catch
-                {
-                    // fallback in case image not found
-                    ElementIcon.Source = null;
-                }
-            }
+            
         }
 
         private void OkButton_Click(object sender, RoutedEventArgs e)

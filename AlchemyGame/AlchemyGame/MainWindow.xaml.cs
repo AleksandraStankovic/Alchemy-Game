@@ -116,17 +116,7 @@ namespace AlchemyGame
             }
         }
 
-        /*
-        private void ElementImage_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            if (_draggedImage != null)
-            {
-                _draggedImage.ReleaseMouseCapture();
-                _isDragging = false;
-                _draggedImage = null;
-            }
-        }
-        */
+     
         private void ElementImage_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             if (_draggedImage == null) return;
@@ -185,7 +175,7 @@ namespace AlchemyGame
                         // Show discovery popup (only first time — your VM handles this!)
                         var dialog = new NewElementWindow(newElement.Name, newElement.IconPath);
                         dialog.Owner = this;
-                        dialog.ShowDialog();
+                        dialog.Show();
 
                         combined = true;
                         break; // Only combine once per drop
