@@ -11,24 +11,61 @@
     <None Remove="Images\air.jpg" />
     <None Remove="Images\air.png" />
     <None Remove="Images\background.avif" />
+    <None Remove="Images\brick.png" />
+    <None Remove="Images\cloud.png" />
     <None Remove="Images\earth.png" />
     <None Remove="Images\energy.png" />
+    <None Remove="Images\family.png" />
     <None Remove="Images\fire.png" />
     <None Remove="Images\forest.png" />
+    <None Remove="Images\heat.png" />
+    <None Remove="Images\house.png" />
+    <None Remove="Images\lava.png" />
     <None Remove="Images\life.png" />
+    <None Remove="Images\light.png" />
+    <None Remove="Images\metal.png" />
     <None Remove="Images\mud.png" />
+    <None Remove="Images\plant.png" />
+    <None Remove="Images\rain.png" />
+    <None Remove="Images\rainbow.png" />
+    <None Remove="Images\smoke.png" />
+    <None Remove="Images\steam.png" />
+    <None Remove="Images\stone.png" />
+    <None Remove="Images\tree.png" />
+    <None Remove="Images\unkonwn.png" />
     <None Remove="Images\water.png" />
+    <None Remove="Images\wood.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\wood.png" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="Images\air.png" />
     <Resource Include="Images\background.avif" />
+    <Resource Include="Images\brick.png" />
+    <Resource Include="Images\cloud.png" />
     <Resource Include="Images\earth.png" />
     <Resource Include="Images\energy.png" />
+    <Resource Include="Images\family.png" />
     <Resource Include="Images\fire.png" />
     <Resource Include="Images\forest.png" />
+    <Resource Include="Images\heat.png" />
+    <Resource Include="Images\house.png" />
+    <Resource Include="Images\lava.png" />
     <Resource Include="Images\life.png" />
+    <Resource Include="Images\light.png" />
+    <Resource Include="Images\metal.png" />
     <Resource Include="Images\mud.png" />
+    <Resource Include="Images\plant.png" />
+    <Resource Include="Images\rain.png" />
+    <Resource Include="Images\rainbow.png" />
+    <Resource Include="Images\smoke.png" />
+    <Resource Include="Images\steam.png" />
+    <Resource Include="Images\stone.png" />
+    <Resource Include="Images\tree.png" />
+    <Resource Include="Images\unkonwn.png" />
     <Resource Include="Images\water.png" />
   </ItemGroup>
 

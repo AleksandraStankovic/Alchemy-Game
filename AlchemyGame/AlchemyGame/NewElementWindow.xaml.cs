@@ -19,7 +19,7 @@ namespace AlchemyGame.ViewModel
     /// </summary>
     public partial class NewElementWindow : Window
     {
-        public NewElementWindow(string name, string iconPath)//ovo ce da primi kao parametre
+        public NewElementWindow(string name, string iconPath)
         {
             InitializeComponent();
             ElementNameText.Text = name;

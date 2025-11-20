@@ -38,7 +38,7 @@ namespace AlchemyGame.ViewModel
                 new Combination {Element1 = "Fire", Element2="Water", Result="Steam"},
                 new Combination {Element1 = "Earth", Element2="Water", Result="Mud"},
                 new Combination {Element1 = "Air", Element2="Water", Result="Cloud"},
-                new Combination {Element1 = "Fire", Element2="Fire", Result="Light"}, 
+               
                 new Combination {Element1 = "Earth", Element2="Heat", Result="Brick"},
                  new Combination {Element1 = "Brick", Element2="Brick", Result="House"},
                   new Combination {Element1 = "Fire", Element2="Earth", Result="Lava"},
@@ -54,6 +54,7 @@ namespace AlchemyGame.ViewModel
                         new Combination {Element1 = "House", Element2="Life", Result="Family"},
                            new Combination {Element1 = "Fire", Element2="Air", Result="Energy"},
                               new Combination {Element1 = "Light", Element2="Rain", Result="Rainbow"},
+                               new Combination {Element1 = "Fire", Element2="Fire", Result="Heat"},
                      new Combination {Element1 = "Axe", Element2="Tree", Result="Wood"},
 
               
@@ -68,25 +69,25 @@ namespace AlchemyGame.ViewModel
 
             if (combo != null)
             {
-                // Check if this element is ALREADY unlocked
+               
                 if (!Elements.Any(e => e.Name == combo.Result))
                 {
-                    // FIRST TIME - add it and return name (popup will show)
+                   
                     Elements.Add(new Element
                     {
                         Name = combo.Result,
                         IsUnlocked = true,
-                        IconPath = GetIconPath(combo.Result) // Add proper icon path
+                        IconPath = GetIconPath(combo.Result) 
                     });
                     return combo.Result;
                 }
-                // Already exists - return null (no popup)
+                
                 return null;
             }
             return null;
         }
 
-        // Helper method - add this to GameViewModel
+      
         private string GetIconPath(string elementName)
         {
             const string basePath = "pack://application:,,,/Images/";
@@ -109,9 +110,12 @@ namespace AlchemyGame.ViewModel
                 "Metal" => basePath + "metal.png",
                 "Axe" => basePath + "axe.png",
                 "Wood" => basePath + "wood.png",
+                //"Steam" => basePath + "steam.png",
                 "Smoke" => basePath + "smoke.png",
                 "Rainbow" => basePath + "rainbow.png",
                 "Family" => basePath + "family.png",
+                "Light" => basePath + "light.png",
+
 
                 _ => basePath + "unknown.png"
             };

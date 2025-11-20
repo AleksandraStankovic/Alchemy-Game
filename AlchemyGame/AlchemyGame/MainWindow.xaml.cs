@@ -25,8 +25,8 @@ namespace AlchemyGame
         private GameViewModel _vm;
         private string _firstElement = null;
         private bool _isDragging = false;
-        private Point _clickPosition;          // Position where the mouse was clicked
-        private Image _draggedImage = null;    // Reference to the image being dragged
+        private Point _clickPosition;         
+        private Image _draggedImage = null;    
 
 
 
@@ -60,14 +60,13 @@ namespace AlchemyGame
             var canvas = sender as Canvas;
             Point dropPosition = e.GetPosition(canvas);
 
-            // Just drop the element - NO automatic combining!
+         
             Image elementImage = CreateElementImage(droppedElement);
             Canvas.SetLeft(elementImage, dropPosition.X - 32);
             Canvas.SetTop(elementImage, dropPosition.Y - 32);
             canvas.Children.Add(elementImage);
 
-            // REMOVED: All the _firstElement / TryCombine logic here
-            // Now combining ONLY happens when dragging one over another!
+   
         }
 
         private bool IsOverlapping(Image img1, Image img2)
@@ -93,10 +92,10 @@ namespace AlchemyGame
             _draggedImage = sender as Image;
             _isDragging = true;
 
-            // Remember the mouse position relative to the image
+            
             _clickPosition = e.GetPosition(_draggedImage);
 
-            // Capture the mouse so we get MouseMove events outside the image
+           
             _draggedImage.CaptureMouse();
         }
 
@@ -107,10 +106,9 @@ namespace AlchemyGame
                 var canvas = _draggedImage.Parent as Canvas;
                 if (canvas == null) return;
 
-                // Get mouse position relative to the canvas
+               
                 Point mousePos = e.GetPosition(canvas);
 
-                // Move image so that the cursor stays at the same position relative to the image
                 Canvas.SetLeft(_draggedImage, mousePos.X - _clickPosition.X);
                 Canvas.SetTop(_draggedImage, mousePos.Y - _clickPosition.Y);
             }
@@ -140,31 +138,31 @@ namespace AlchemyGame
 
             bool combined = false;
 
-            // Check all other images on canvas for overlap
-            foreach (Image otherImage in canvas.Children.OfType<Image>().ToList()) // ToList() to avoid collection modified error
+           
+            foreach (Image otherImage in canvas.Children.OfType<Image>().ToList()) 
             {
                 if (otherImage == _draggedImage) continue;
 
                 var otherElement = otherImage.Tag as Element;
                 if (otherElement == null) continue;
 
-                // Only combine if they are ACTUALLY overlapping
+               
                 if (IsOverlapping(_draggedImage, otherImage))
                 {
                     string result = _vm.TryCombine(draggedElement.Name, otherElement.Name);
 
-                    if (result != null) // Valid combination!
+                    if (result != null) 
                     {
-                        // Remove both old elements
+                        
                         canvas.Children.Remove(_draggedImage);
                         canvas.Children.Remove(otherImage);
 
-                        // Create the new element
+                    
                         Element newElement = _vm.Elements.First(el => el.Name == result);
 
                         Image newImage = CreateElementImage(newElement);
 
-                        // Position in the center between the two
+                      
                         double centerX = (Canvas.GetLeft(_draggedImage) + Canvas.GetLeft(otherImage) + 64) / 2 - 32;
                         double centerY = (Canvas.GetTop(_draggedImage) + Canvas.GetTop(otherImage) + 64) / 2 - 32;
 
@@ -172,19 +170,18 @@ namespace AlchemyGame
                         Canvas.SetTop(newImage, centerY);
                         canvas.Children.Add(newImage);
 
-                        // Show discovery popup (only first time — your VM handles this!)
+                       
                         var dialog = new NewElementWindow(newElement.Name, newElement.IconPath);
                         dialog.Owner = this;
                         dialog.Show();
 
                         combined = true;
-                        break; // Only combine once per drop
+                        break; 
                     }
                 }
             }
 
-            // Optional: If no combination happened, just leave the dragged image where it is
-            // (already done — no extra code needed)
+           
 
             _draggedImage = null;
         }
@@ -213,7 +210,7 @@ namespace AlchemyGame
         }
         private void ClearCanvasButton_Click(object sender, RoutedEventArgs e)
         {
-            // Keep only the hint TextBlock, remove all dropped images
+            
             var hint = GameCanvas.Children.OfType<TextBlock>().FirstOrDefault();
             GameCanvas.Children.Clear();
             if (hint != null)

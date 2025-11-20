@@ -13,7 +13,7 @@
                           BlurRadius="4"
                           Opacity="0.8"/>
 
-        <!-- Ancient wooden / brass ScrollBar style -->
+        
         <Style x:Key="AncientScrollBarStyle" TargetType="ScrollBar">
             <Setter Property="Background" Value="#FF3C2A1A"/>
             <Setter Property="Foreground" Value="#FF8B6914"/>
@@ -44,13 +44,6 @@
             </Setter>
         </Style>
 
-        <!-- Optional: make EVERY ScrollBar in the app use the ancient style automatically -->
-        <!-- Uncomment the line below if you want it everywhere (including future windows) -->
-        <!--
-        <Style TargetType="ScrollBar" BasedOn="{StaticResource AncientScrollBarStyle}"/>
-        -->
-
-        <!-- You can also add a global style for ListBoxItem to remove selection highlight completely -->
         <Style TargetType="ListBoxItem">
             <Setter Property="Template">
                 <Setter.Value>
